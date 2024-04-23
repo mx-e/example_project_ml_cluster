@@ -26,6 +26,7 @@ We want to run a python hydra script running python outside apptainer which then
 
 
 ## How to use
+For information on configuration management and overrides see the [Hydra](https://hydra.cc) documentation.
 
 ### Building container
 Build the container using apptainer:
