@@ -1,0 +1,11 @@
+# @package _global_
+
+training:
+  batch_size: 32
+  lr: 1e-3
+  weight_decay: 0.01
+
+model:
+  encoder_max_length: 32
+
+

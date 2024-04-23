@@ -1,0 +1,11 @@
+Bootstrap: docker
+From: python:3.10
+
+%files 
+    ${PWD}/pyproject.toml /pyproject.toml
+
+%post
+    chmod 1777 /tmp
+    export DEBIAN_FRONTEND=noninteractive
+    pip install --root-user-action=ignore poetry cmake lit torch torchvision
+    poetry config virtualenvs.create false && poetry install --no-interaction --no-ansi

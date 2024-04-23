@@ -1,0 +1,13 @@
+[tool.poetry]
+name = "diffusion_text_cf"
+version = "0.1.0"
+description = ""
+authors = ["mx-e <maxi.eissler@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "3.10.14"
+transformers = "^4.40.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
