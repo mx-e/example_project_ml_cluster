@@ -1,6 +1,8 @@
 # Example ML project setup on the IDA SLURM cluster using Hydra for configuration and abstracting away Apptainer and SLURM
 **Attention: This is not a generally recommended setup for an ML project on SLURM. It's rather a specialized solution for the IDA cluster.** 
 
+![use example](/img/example.png)
+
 ## Motivation
 For ML projects, good configuration management is important for documenting experiments and runs and simplifying parameter overrides. Type checking makes console overrides less error-prone. Multirun support simplifies hyperparameter tuning by allowing scheduling and launching of several jobs using a simple override syntax.
 
