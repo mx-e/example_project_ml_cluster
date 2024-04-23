@@ -7,7 +7,7 @@ from omegaconf import MISSING
 @dataclass
 class SlurmConfig:
     partition: str = "cpu-5h"
-    cpus: int = 4
+    cpus: int = 2
     gpu_type: Union[str, None] = None
     output_dir: str = "logs"
     mem: str = "16GB"
