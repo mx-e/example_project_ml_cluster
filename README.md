@@ -42,7 +42,7 @@ The 'nv' flag is important to build the CUDA backend of Torch when a GPU is avai
 
 
 ### Installing & removing dependencies
-This example uses poetry for dependency management. To add and remove dependencies use 
+This example uses [poetry](https://python-poetry.org) for dependency management. It is therefore installed in the ```container.def``` file. However, you can use any other solution you prefer. To add and remove dependencies using poetry type: 
 
 ```apptainer run --nv container.sif poetry --no-cache add --lock <dependencies>```
 
