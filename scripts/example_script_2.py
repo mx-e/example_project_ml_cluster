@@ -16,7 +16,6 @@ from src.utils import set_runtime_cfg
 @configure_run(CONFIG_CLASS)
 def main(conf: CONFIG_CLASS):
     set_runtime_cfg(conf)
-    set_seed(conf.seed)
     log.info(f"Running script 2 with config: {conf}")
 
 

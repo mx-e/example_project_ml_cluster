@@ -15,7 +15,7 @@ from src.utils import set_runtime_cfg
 
 @configure_run(CONFIG_CLASS)
 def main(conf: CONFIG_CLASS):
-    set_runtime_cfg(conf)
+    set_runtime_cfg(conf) # adds variables known at runtime such as number of gpus etc
     set_seed(conf.training.seed)
     log.info(f"Running script 1 with config: {conf}")
 

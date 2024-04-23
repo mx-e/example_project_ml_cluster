@@ -4,6 +4,9 @@ from dataclasses import dataclass, field
 from hydra.core.config_store import ConfigStore
 from conf.base_config import BaseConfig
 
+
+
+## EDIT OUT DIR PATH HERE 
 OUT_SUBPATH = "script_2"
 
 hydra_conf =  {
@@ -13,6 +16,7 @@ hydra_conf =  {
     },
     "mode": "RunMode.RUN",
 }
+##
 
 cs = ConfigStore.instance()
 
@@ -21,6 +25,7 @@ class InferenceConfig:
     batch_size: int = 64
     seed: int = 1108
 
+@dataclass
 class ModelConfig:
     load_path: str = "model.pt"
     train_config_dir: str = "../out/script_1/2021-09-29_15-00-00"
