@@ -26,3 +26,30 @@ We want to run a python hydra script running python outside apptainer which then
 
 
 ## How to use
+
+### Building container
+Build the container using apptainer:
+
+```apptainer build --nv container.sif container.def```
+
+The 'nv' flag is important to build the CUDA backend of torch when a GPU is available - you might have to rebuild the container when switching from a CPU to a GPU node.
+
+*You need to be on a SLURM node (srun shell)for this command to work.*
+
+
+### Installing & removing dependencies
+This example uses poetry for dependency management. To add and remove dependencies use 
+
+```apptainer run --nv container.sif poetry --no-cache add --lock <dependencies>```
+
+and 
+
+```apptainer run --nv container.sif poetry --no-cache remove --lock <dependencies>```.
+
+This will only update the pyproject.toml with the correct package and version information without touching the cluster filesystem otherwise or installing anything. Rebuild the container to use resolved packages.
+
+### Launching scripts (on the cluster)
+### Configuring SLURM
+
+
+
